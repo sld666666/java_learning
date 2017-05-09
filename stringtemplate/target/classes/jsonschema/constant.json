@@ -1,0 +1,16 @@
+{
+  "title" :"constant",
+  "type" : "object",
+  "properties" :{
+    "appName" : {
+      "type":"string"
+    },
+    "appClassName" :{
+      "type" : "string"
+    },
+
+    "date":{
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+   http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="greetService" class="chaper01.GreetingServiceImpl">
+
+        <property name="greeting">
+            <value> hello world</value>
+        </property>
+    </bean>
+
+    <bean id="quest" class="chaper01.knight.HolyGrailQuest"></bean>
+    <bean id="knight" class="chaper01.knight.KnightOfRoundTable">
+        <constructor-arg>
+            <value>John</value>
+        </constructor-arg>
+        
+        <property name="quest">
+            <ref bean="quest"></ref>
+        </property>
+
+    </bean>
+
+    <bean id="minstrel" class="chaper01.knight.Minstrel"></bean>
+
+    <bean id="knight_listener" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces">
+            <list>
+                <value>chaper01.knight.IKnight</value>
+            </list>
+        </property>
+        
+        <property name="interceptorNames">
+            <list>
+                <value>minstrel</value>
+            </list>
+        </property>
+
+        <property name="target">
+            <ref bean="knight"></ref>
+        </property>
+    </bean>
+
+
+</beans>

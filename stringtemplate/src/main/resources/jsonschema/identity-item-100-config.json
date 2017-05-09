@@ -1,0 +1,19 @@
+{
+  "title" :"identity-item-100-config",
+  "type" : "object",
+  "properties" :{
+    "appName" : {
+      "type":"string"
+    },
+    "appClassName" :{
+      "type" : "string"
+    },
+
+    "desc":{
+      "type" : "string"
+    },
+    "identity":{
+      "type" : "string"
+    }
+  }
+}

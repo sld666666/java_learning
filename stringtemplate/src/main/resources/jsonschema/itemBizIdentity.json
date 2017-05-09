@@ -1,0 +1,19 @@
+{
+  "title" :"identityConstant",
+  "type" : "object",
+  "properties" :{
+    "appName" : {
+      "type":"string"
+    },
+    "appClassName" :{
+      "type" : "string"
+    },
+
+    "date":{
+      "type" : "string"
+    },
+    "desc":{
+      "type" : "string"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title" :"pom_schema",
+  "type" : "object",
+  "properties" :{
+    "appName" : {
+      "type":"string"
+    }
+  }
+}

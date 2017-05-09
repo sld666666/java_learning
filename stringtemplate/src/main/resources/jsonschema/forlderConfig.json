@@ -1,0 +1,22 @@
+{
+  "title" :"forder_config_schema",
+  "type" : "object",
+  "properties" :{
+    "appName" : {
+      "type":"string"
+    },
+    "appClassName" :{
+      "type" : "string"
+    },
+
+    "date":{
+      "type" : "string"
+    },
+    "desc":{
+      "type" : "string"
+    },
+    "identity":{
+      "type" : "string"
+    }
+  }
+}
